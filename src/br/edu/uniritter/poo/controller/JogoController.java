@@ -30,7 +30,7 @@ public class JogoController {
         for(int nroJogadoresTemp = nroJogadores;nroJogadoresTemp != 0;nroJogadoresTemp--) {
         	jogadorView.nomeJogador();
         	String jogadorTemp = scan.next();
-            jogadores.add(new Jogador("Oi"));
+            jogadores.add(new Jogador(jogadorTemp));
     
         }
         
