@@ -15,7 +15,7 @@ public abstract class Carta {
             retorno = this.valor+"";
         } else {
             switch (this.valor) {
-                case 1: retorno = "√Ås"; break;
+                case 1: retorno = "¡s"; break;
                 case 11: retorno = "Valete"; break;
                 case 12: retorno = "Dama"; break;
                 case 13: retorno = "Rei"; break;

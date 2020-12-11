@@ -18,12 +18,12 @@ public class JogoView {
         if (lixo.estaVazio()) {
             System.out.println(" VAZIO NO MOMENTO");
         } else {
-            //System.out.println("a carta Ã© surpresa");
+            //System.out.println("a carta é surpresa");
             System.out.println(lixo.cartaDeCima().getDescricao());
         }
     }
     public void ondeComprar() {
-        System.out.println("VocÃª quer comprar do (1)baralho ou do (2) Lixo ?");
+        System.out.println("Você quer comprar do: \n(1) Baralho \n(2) Lixo");
         int resp = 0;
         Scanner scan = new Scanner(System.in);
         do {

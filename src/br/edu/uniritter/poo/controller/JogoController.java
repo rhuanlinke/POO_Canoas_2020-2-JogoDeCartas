@@ -8,6 +8,7 @@ import br.edu.uniritter.poo.jogoDeCartas.view.JogoView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class JogoController {
 
@@ -17,23 +18,34 @@ public class JogoController {
     private Lixo lixo;
     private Baralho bar;
     private int jogAtual = 0;
+    public int nroJogadores = 0;
+    
     public JogoController() {
         this.jogoView = new JogoView(this);
         this.jogadorView = new JogadorView(this);
+        Scanner scan = new Scanner(System.in);
         jogadores = new ArrayList<>();
-        jogadores.add(new Jogador("Jean"));
-        jogadores.add( new Jogador("Paul"));
-        jogadores.add(new Jogador("Lopes"));
+        nroJogadores = jogadorView.quantosJogadores();
+        
+        for(int nroJogadoresTemp = nroJogadores;nroJogadoresTemp != 0;nroJogadoresTemp--) {
+        	jogadorView.nomeJogador();
+        	String jogadorTemp = scan.next();
+            jogadores.add(new Jogador("Oi"));
+    
+        }
+        
         lixo = new Lixo();
 
         bar = new Baralho(1);
     }
 
     public void preJogo() {
-        for(int i = 1; i<=9; i++) {
-            jogadores.get(0).recebeCarta(bar.comprar());
-            jogadores.get(1).recebeCarta(bar.comprar());
-            jogadores.get(2).recebeCarta(bar.comprar());
+    	for(int i = 1; i<=9; i++) {
+    		int nroJogadoresTemp = 0;
+    		while(nroJogadoresTemp != nroJogadores) {
+    			jogadores.get(nroJogadoresTemp).recebeCarta(bar.comprar());
+               	nroJogadoresTemp++;
+               }
         }
     }
 
