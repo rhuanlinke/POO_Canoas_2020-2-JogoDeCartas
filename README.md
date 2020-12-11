@@ -11,7 +11,7 @@ Alterei os métodos abaixo:
 - JogadorView.escolheCartaDescartar = adicionei a linha 26 (resp--), pois sempre que eu digitava um número a ser descartado, era o número acima deste que era selecionado. Inclusive se selecionássemos o 10, o sistema verificava que não tinha nenhum acima dele, e gerava o erro mencionado abaixo.
 
 Erros:
-1. Sempre que tento que descartar a carta de nro 10, ocorre o erro abaixo:
+1. Sempre que tento descartar a carta de nro 10, ocorre o erro abaixo:
 Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 10 out of bounds for length 10
 - RESOLVIDO, adicionando o -1 junto ao scan de qual carta descartar.
 
